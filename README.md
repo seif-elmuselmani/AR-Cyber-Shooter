@@ -2,7 +2,6 @@
 
 > A browser-based Augmented Reality shooting game built with **Three.js** and **MediaPipe**.
 
-![Game Banner](https://media.giphy.com/media/Is0AJv4C75SN2/giphy.gif)
 
 ## 🚀 Concept
 An immersive AR experience where players use hand gestures to aim and shoot virtual targets floating in their real-world environment.
@@ -44,6 +43,7 @@ npm install
 # 3. Run locally
 npm run dev
 ```
+
 
 
 
