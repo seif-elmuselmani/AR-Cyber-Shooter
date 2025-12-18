@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>AR Cyber Shooter | Pro Edition</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div id="ui-layer">
+      <div id="loading-screen">
+        <div class="spinner"></div>
+        <div class="loading-text">INITIALIZING NEURAL SYSTEMS...</div>
+        <div class="sub-text">Please allow camera access</div>
+      </div>
+
+      <div id="hud" style="display: none">
+        <div class="hud-panel top-left">
+          <div class="label">SCORE</div>
+          <div id="score">0000</div>
+        </div>
+
+        <div class="hud-panel top-right">
+          <div class="label">SYSTEM STATUS</div>
+          <div class="status-indicator">ONLINE</div>
+        </div>
+
+        <div id="crosshair">
+          <div class="crosshair-center"></div>
+          <div class="crosshair-ring"></div>
+        </div>
+
+        <div class="hud-panel bottom-center">
+          <div class="gesture-guide">
+            <span>☝ AIM: Index</span>
+            <span style="color: #ff0055; margin-left: 15px"
+              >👎 FIRE: Thumb Down</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="canvas-container"></div>
+
+    <video id="input-video" autoplay playsinline></video>
+
+    <script type="module" src="/src/main.js"></script>
+
+    <script
+      src="https://unpkg.com/@mediapipe/camera_utils/camera_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/@mediapipe/control_utils/control_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/@mediapipe/drawing_utils/drawing_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/@mediapipe/hands@0.4.1646424915/hands.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
